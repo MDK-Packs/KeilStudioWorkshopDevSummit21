@@ -8,7 +8,9 @@ This introductory workshop allows attendees to experience the workflow first-han
 
 - Keil Studio Cloud runs in a browser. You need a Chromium based browser (Chrome/Edge - no matter if you run Windows, Mac, or Linux).
 - Create a user account at [studio.keil.arm.com](studio.keil.arm.com) and ensure you can login. If you have an Arm or Mbed account, you can use these to access the site.
-- The workshop uses the [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) to download and debug to the target. Please make sure that the latest FW for the debug adapter is installed. Follow the instructions on the [Guide](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/guide/) tab (“CMSIS-DAP Firmware” section). If you do not have access to the board, you can still follow much of the workshop. Debug will be demonstrated by the facilitators of the workshop.
+- The workshop uses the [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) to download and debug to the target:
+  - Please make sure that the latest FW for the debug adapter is installed. Follow the instructions on the [Guide](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/guide/) tab (“CMSIS-DAP Firmware” section).
+  - If you do not have access to the board, you can still follow much of the workshop. Debug will be demonstrated by the facilitators of the workshop.
 - We recommend a dual monitor setup, so that you can see the workshop and your Keil Studio workspace at the same time.
 
 ## Optional pre-work
@@ -16,13 +18,15 @@ This introductory workshop allows attendees to experience the workflow first-han
 Two of the projects shown in the workshop require additional accounts being set up:
 
 - Set up a [GitHub](https://www.github.com) account for forking one of the example projects.
-- Set up an AWS account if you want to follow the last step in the tutorial. Create one at [aws.amazon.com](aws.amazon.com). For the workshop, you need to configure a Thing in the AWS IoT console. You also need to have copies of your client certificate and private key available. Follow [these instructions](https://github.com/MDK-Packs/Documentation/tree/master/AWS_Thing) to have all this ready.
+- Set up an AWS account if you want to follow the last step in the tutorial:
+  - Create an account at [aws.amazon.com](aws.amazon.com).
+  - For the workshop, you need to configure a Thing in the AWS IoT console. You also need to have copies of your client certificate and private key available. For creation, follow [these instructions](https://github.com/MDK-Packs/Documentation/tree/master/AWS_Thing).
 
 ## Required hardware
 
 For the best workshop experience, you'll need the following:
 
-- NXP IMXRT1050-EVKB (if you don’t have the hardware, you can still follow most of the workshop).
+- [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) (if you don’t have the hardware, you can still follow most of the workshop).
 - Ethernet cable long enough to connect the board to your router.
 - 5V USB power supply with Micro-USB cable to supply the dev board.
 - Optional: SparkFun WiFi Shield DA16200.
