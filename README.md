@@ -1,4 +1,4 @@
-# Introducing Keil Studio and Cloud-based Development for IoT and Embedded Applications (Arm DevSummit 2021)
+# Arm DevSummit 2021: Introducing Keil Studio
 
 Successful IoT implementations require collaboration and a robust ecosystem of support and tools. Keil Studio cloud embraces the Open-CMSIS-Pack initiative and provides a cloud-native platform with direct Git integration for collaboration of distributed teams, and modern CI workflows for rapid development.
 
