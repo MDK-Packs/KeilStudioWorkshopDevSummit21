@@ -31,9 +31,17 @@ For the best workshop experience, you'll need the following:
 - 5V USB power supply with Micro-USB cable to supply the dev board.
 - Optional: SparkFun WiFi Shield DA16200.
 
+### Basic hardware setup
+
+- Close 3-4 on jumper block J1
+- Attach the 5V USB power supply at J9
+- Connect your computer to the development board at J28
+
+![Basic hardware setup](images/hw_setup.png)
+
 ## Slides
 
-The following slide deck contains screenshots of the workshop. Use it to recreate the workshop in your own pace.
+The [slide deck]() contains screenshots of the workshop. Use it to recreate the workshop in your own pace.
 
 ## Further reading
 
