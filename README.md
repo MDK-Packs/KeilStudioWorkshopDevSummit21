@@ -29,7 +29,7 @@ For the best workshop experience, you'll need the following:
 - [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) (if you don’t have the hardware, you can still follow most of the workshop).
 - Ethernet cable long enough to connect the board to your router.
 - 5V USB power supply with Micro-USB cable to supply the dev board.
-- Optional: SparkFun WiFi Shield DA16200.
+- Optional: [SparkFun WiFi Shield DA16200](https://www.sparkfun.com/products/18567).
 
 ### Basic hardware setup
 
