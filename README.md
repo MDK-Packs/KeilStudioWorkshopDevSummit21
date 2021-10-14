@@ -14,36 +14,44 @@ For the best workshop experience, you'll need the following:
 
 If you do not have access to the board, you can still follow much of the workshop. Debug will be demonstrated by the facilitators of the workshop.
 
-### Basic hardware setup
+### Basic hardware setup for the workshop
 
-- Close 3-4 on jumper block J1
-- Attach the 5V USB power supply at J9
-- Connect your computer to the development board at J28
+- Close **3-4** on jumper block **J1** (bottom left corner of the board).
+- Attach the 5V USB power supply at **J9** (next to the Ethernet receptacle).
+- Connect your computer to the development board at **J28** (top right corner of the board).
 
 ![Basic hardware setup](images/hw_setup.png)
 
+## Pre-work
+
+For jumpers, switches, and cable connections refer to the image above!
+
 ### CMSIS-DAP Firmware
 
-Make sure that you have updated your CMSIS-DAP firmware to the latest version. This makes the board compatible with [Keil Studio Cloud](https://keil.arm.com) that enables browser-based project creation and debugging. The following instructions apply if your board is equipped with at U23 a Kinetis K20DX device (marked as M20AGV).
+Make sure that you have updated your CMSIS-DAP firmware to the latest version. This makes the board compatible with [Keil Studio Cloud](https://keil.arm.com) that enables browser-based project creation and debugging. The following instructions apply if your board is equipped with a Kinetis K20DX device (marked as M20AGV) at U23.
 
 #### Using HyperFlash
 
-If your board is configured for HyperFlash (SW7 is set to OFF/ON/ON/OFF), use the following CMSIS-DAP firmware: [DAPLink 0254](../DAPLink/0254_k20dx_mimxrt1050_evk_hyper_0x8000.bin)
+If your board is configured for HyperFlash (**SW7** is set to **OFF/ON/ON/OFF**), use the following CMSIS-DAP firmware: [DAPLink 0254](./DAPLink/0254_k20dx_mimxrt1050_evk_hyper_0x8000.bin)
 
 #### Using QSPI Flash
 
-If your board is configured for QSPI Flash (SW7 is *not set* to OFF/ON/ON/OFF), use the following CMSIS-DAP firmware: [DAPLink 0254](../DAPLink/0254_k20dx_mimxrt1050_evk_qspi_0x8000.bin)
+If your board is configured for QSPI Flash (**SW7** is *not set* to **OFF/ON/ON/OFF**), use the following CMSIS-DAP firmware: [DAPLink 0254](./DAPLink/0254_k20dx_mimxrt1050_evk_qspi_0x8000.bin)
+
+#### Jumper settings
+
+Close **1-2** on jumper block **J27** (top right corner of the board). 
 
 **Flashing instructions for Windows users**
 
-1. While holding down the boards reset button, connect the boards USB debug port to the computer. It should enumerate and mount as **MAINTENANCE**.
+1. While holding down the **SW4** button, connect the boards USB debug port to the computer. It should enumerate and mount as **MAINTENANCE**.
 1. Drag-and-drop the firmware file onto the mounted drive.
 1. Wait for the file copy operation to complete.
 1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
 
 **Flashing instructions for Linux users**
 
-1. While holding down the boards reset button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
+1. While holding down the **SW4** button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
 1. In a terminal execute  
    `cp <path to firmware file> <MAINTENANCE> && sync`  
    *Note*: make sure to change MAINTENANCE to the name of the mount point of the drive on your system.
@@ -51,14 +59,12 @@ If your board is configured for QSPI Flash (SW7 is *not set* to OFF/ON/ON/OFF), 
 
 **Flashing instructions for MAC users**
 
-1. While holding down the boards reset button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
+1. While holding down the **SW4** button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
 1. In a terminal execute  
    `sudo mount -u -w -o sync /Volumes/MAINTENANCE ; cp -X <path to firmware file> /Volumes/MAINTENANCE/`  
    *Note*: If your drive does not mount as MAINTENANCE make sure to change this to match the name of the mounted disk attached to your system.
 1. Wait for the file copy operation to complete.
 1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
-
-## Pre-work
 
 - Keil Studio Cloud runs in a browser. You need a Chromium based browser (Chrome/Edge - no matter if you run Windows, Mac, or Linux).
 - Create a user account at [studio.keil.arm.com](studio.keil.arm.com) and ensure you can login. If you have an Arm or Mbed account, you can use these to access the site.
