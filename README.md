@@ -4,13 +4,64 @@ Successful IoT implementations require collaboration and a robust ecosystem of s
 
 This introductory workshop allows attendees to experience the workflow first-hand. They will prototype an IoT end node application, connect it to the cloud, and debug it via their browser.
 
+## Required hardware
+
+For the best workshop experience, you'll need the following:
+
+- [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) (if you don’t have the hardware, you can still follow most of the workshop).
+- Ethernet cable long enough to connect the board to your router.
+- 5V USB power supply with Micro-USB cable to supply the dev board.
+
+If you do not have access to the board, you can still follow much of the workshop. Debug will be demonstrated by the facilitators of the workshop.
+
+### Basic hardware setup
+
+- Close 3-4 on jumper block J1
+- Attach the 5V USB power supply at J9
+- Connect your computer to the development board at J28
+
+![Basic hardware setup](images/hw_setup.png)
+
+### CMSIS-DAP Firmware
+
+Make sure that you have updated your CMSIS-DAP firmware to the latest version. This makes the board compatible with [Keil Studio Cloud](https://keil.arm.com) that enables browser-based project creation and debugging. The following instructions apply if your board is equipped with at U23 a Kinetis K20DX device (marked as M20AGV).
+
+#### Using HyperFlash
+
+If your board is configured for HyperFlash (SW7 is set to OFF/ON/ON/OFF), use the following CMSIS-DAP firmware: [DAPLink 0254](../DAPLink/0254_k20dx_mimxrt1050_evk_hyper_0x8000.bin)
+
+#### Using QSPI Flash
+
+If your board is configured for QSPI Flash (SW7 is *not set* to OFF/ON/ON/OFF), use the following CMSIS-DAP firmware: [DAPLink 0254](../DAPLink/0254_k20dx_mimxrt1050_evk_qspi_0x8000.bin)
+
+**Flashing instructions for Windows users**
+
+1. While holding down the boards reset button, connect the boards USB debug port to the computer. It should enumerate and mount as **MAINTENANCE**.
+1. Drag-and-drop the firmware file onto the mounted drive.
+1. Wait for the file copy operation to complete.
+1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
+
+**Flashing instructions for Linux users**
+
+1. While holding down the boards reset button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
+1. In a terminal execute  
+   `cp <path to firmware file> <MAINTENANCE> && sync`  
+   *Note*: make sure to change MAINTENANCE to the name of the mount point of the drive on your system.
+1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
+
+**Flashing instructions for MAC users**
+
+1. While holding down the boards reset button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
+1. In a terminal execute  
+   `sudo mount -u -w -o sync /Volumes/MAINTENANCE ; cp -X <path to firmware file> /Volumes/MAINTENANCE/`  
+   *Note*: If your drive does not mount as MAINTENANCE make sure to change this to match the name of the mounted disk attached to your system.
+1. Wait for the file copy operation to complete.
+1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
+
 ## Pre-work
 
 - Keil Studio Cloud runs in a browser. You need a Chromium based browser (Chrome/Edge - no matter if you run Windows, Mac, or Linux).
 - Create a user account at [studio.keil.arm.com](studio.keil.arm.com) and ensure you can login. If you have an Arm or Mbed account, you can use these to access the site.
-- The workshop uses the [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) to download and debug to the target:
-  - Please make sure that the latest FW for the debug adapter is installed. Follow the instructions on the [Guide](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/guide/) tab (“CMSIS-DAP Firmware” section).
-  - If you do not have access to the board, you can still follow much of the workshop. Debug will be demonstrated by the facilitators of the workshop.
 - We recommend a dual monitor setup, so that you can see the workshop and your Keil Studio workspace at the same time.
 
 ## Optional pre-work
@@ -21,23 +72,6 @@ Two of the projects shown in the workshop require additional accounts being set 
 - Set up an AWS account if you want to follow the last step in the tutorial:
   - Create an account at [aws.amazon.com](aws.amazon.com).
   - For the workshop, you need to configure a Thing in the AWS IoT console. You also need to have copies of your client certificate and private key available. For creation, follow [these instructions](https://github.com/MDK-Packs/Documentation/tree/master/AWS_Thing).
-
-## Required hardware
-
-For the best workshop experience, you'll need the following:
-
-- [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) (if you don’t have the hardware, you can still follow most of the workshop).
-- Ethernet cable long enough to connect the board to your router.
-- 5V USB power supply with Micro-USB cable to supply the dev board.
-- Optional: [SparkFun WiFi Shield DA16200](https://www.sparkfun.com/products/18567).
-
-### Basic hardware setup
-
-- Close 3-4 on jumper block J1
-- Attach the 5V USB power supply at J9
-- Connect your computer to the development board at J28
-
-![Basic hardware setup](images/hw_setup.png)
 
 ## Slides
 
