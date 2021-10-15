@@ -17,7 +17,7 @@ If you do not have access to the board, you can still follow much of the worksho
 ### Basic hardware setup for the workshop
 
 - Close **3-4** on jumper block **J1** (bottom left corner of the board).
-- Attach the 5V USB power supply at **J9** (next to the Ethernet receptacle).
+- Attach the 5V USB power supply at **J9** (next to the Ethernet socket).
 - Connect your computer to the development board at **J28** (top right corner of the board).
 
 ![Basic hardware setup](images/hw_setup.png)
