@@ -11,6 +11,7 @@ For the best workshop experience, you'll need the following:
 - **NXP IMXRT1050-EVKB** (if you don’t have the hardware, you can still follow most of the workshop).
 - Ethernet cable long enough to connect the board to your router.
 - 5V USB power adapter with a Micro-USB cable to supply the dev board.
+- We recommend a dual monitor setup, so that you can see the workshop and your Keil Studio workspace at the same time.
 
 If you do not have access to the board, you can still follow much of the workshop. Debug will be demonstrated by the facilitators of the workshop.
 
@@ -24,9 +25,14 @@ If you do not have access to the board, you can still follow much of the worksho
 
 ## Pre-work
 
-For jumpers, switches, and cable connections refer to the image above!
+### Required software
+
+- Keil Studio Cloud runs in a browser. You need a **Chromium** based browser (Chrome/Edge - no matter if you run Windows, Mac, or Linux).
+- Create a user account at [studio.keil.arm.com](studio.keil.arm.com) and ensure you can login. If you have an Arm or Mbed account, you can use these to access the site.
 
 ### CMSIS-DAP Firmware
+
+For jumpers, switches, and cable connections refer to the image above!
 
 Make sure that you have updated your CMSIS-DAP firmware to the latest version. This makes the board compatible with [Keil Studio Cloud](https://keil.arm.com) that enables browser-based project creation and debugging. The following instructions apply if your board is equipped with a Kinetis K20DX device (marked as M20AGV) at **U23**.
 
@@ -42,33 +48,29 @@ If your board is configured for QSPI Flash (**SW7** is *not set* to **OFF/ON/ON/
 
 Close **1-2** on jumper block **J27** (top right corner of the board). 
 
-**Flashing instructions for Windows users**
+#### Flashing instructions for Windows users
 
-1. While holding down the **SW4** button, connect the boards USB debug port to the computer. It should enumerate and mount as **MAINTENANCE**.
+1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate and mount as **MAINTENANCE**.
 1. Drag-and-drop the firmware file onto the mounted drive.
 1. Wait for the file copy operation to complete.
-1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
+1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
 
-**Flashing instructions for Linux users**
+#### Flashing instructions for Linux users
 
-1. While holding down the **SW4** button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
+1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate as **MAINTENANCE**.
 1. In a terminal execute  
    `cp <path to firmware file> <MAINTENANCE> && sync`  
    *Note*: make sure to change MAINTENANCE to the name of the mount point of the drive on your system.
-1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
+1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
 
-**Flashing instructions for MAC users**
+#### Flashing instructions for MAC users
 
-1. While holding down the **SW4** button, connect the boards USB debug port to the computer. It should enumerate as MAINTENANCE.
+1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate as **MAINTENANCE**.
 1. In a terminal execute  
    `sudo mount -u -w -o sync /Volumes/MAINTENANCE ; cp -X <path to firmware file> /Volumes/MAINTENANCE/`  
    *Note*: If your drive does not mount as MAINTENANCE make sure to change this to match the name of the mounted disk attached to your system.
 1. Wait for the file copy operation to complete.
-1. Power cycle the board. It will now enumerate and mount as DAPLINK or the name of the board.
-
-- Keil Studio Cloud runs in a browser. You need a Chromium based browser (Chrome/Edge - no matter if you run Windows, Mac, or Linux).
-- Create a user account at [studio.keil.arm.com](studio.keil.arm.com) and ensure you can login. If you have an Arm or Mbed account, you can use these to access the site.
-- We recommend a dual monitor setup, so that you can see the workshop and your Keil Studio workspace at the same time.
+1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
 
 ## Optional pre-work
 
