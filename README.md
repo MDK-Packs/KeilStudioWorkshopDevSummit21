@@ -8,9 +8,9 @@ This introductory workshop allows attendees to experience the workflow first-han
 
 For the best workshop experience, you'll need the following:
 
-- [NXP IMXRT1050-EVKB](https://www.keil.arm.com/hardware/IMXRT1050-EVKB/) (if you don’t have the hardware, you can still follow most of the workshop).
+- **NXP IMXRT1050-EVKB** (if you don’t have the hardware, you can still follow most of the workshop).
 - Ethernet cable long enough to connect the board to your router.
-- 5V USB power supply with Micro-USB cable to supply the dev board.
+- 5V USB power adapter with a Micro-USB cable to supply the dev board.
 
 If you do not have access to the board, you can still follow much of the workshop. Debug will be demonstrated by the facilitators of the workshop.
 
@@ -28,7 +28,7 @@ For jumpers, switches, and cable connections refer to the image above!
 
 ### CMSIS-DAP Firmware
 
-Make sure that you have updated your CMSIS-DAP firmware to the latest version. This makes the board compatible with [Keil Studio Cloud](https://keil.arm.com) that enables browser-based project creation and debugging. The following instructions apply if your board is equipped with a Kinetis K20DX device (marked as M20AGV) at U23.
+Make sure that you have updated your CMSIS-DAP firmware to the latest version. This makes the board compatible with [Keil Studio Cloud](https://keil.arm.com) that enables browser-based project creation and debugging. The following instructions apply if your board is equipped with a Kinetis K20DX device (marked as M20AGV) at **U23**.
 
 #### Using HyperFlash
 
