@@ -55,14 +55,6 @@ Close **1-2** on jumper block **J27** (top right corner of the board).
 1. Wait for the file copy operation to complete.
 1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
 
-#### Flashing instructions for Linux users
-
-1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate as **MAINTENANCE**.
-1. In a terminal execute  
-   `cp <path to firmware file> <MAINTENANCE> && sync`  
-   *Note*: make sure to change MAINTENANCE to the name of the mount point of the drive on your system.
-1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
-
 #### Flashing instructions for MAC users
 
 1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate as **MAINTENANCE**.
@@ -71,6 +63,23 @@ Close **1-2** on jumper block **J27** (top right corner of the board).
    *Note*: If your drive does not mount as MAINTENANCE make sure to change this to match the name of the mounted disk attached to your system.
 1. Wait for the file copy operation to complete.
 1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
+
+#### Flashing instructions for Linux users
+
+1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate as **MAINTENANCE**.
+1. In a terminal execute  
+   `$ cp <path to firmware file> <MAINTENANCE> && sync`  
+   *Note*: make sure to change MAINTENANCE to the name of the mount point of the drive on your system.
+1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
+
+#### Accessing the board under Linux
+
+1. On Linux, permission to access USB devices from user space must be explicitly granted via udev rules. This repo contains [daplink.rules](./DAPLink/daplink.rules) that you can copy to make this work.
+1. To install, copy the [daplink.rules](./DAPLink/daplink.rules) to `/etc/udev/rules.d/` on Ubuntu:  
+   `$ sudo cp daplink.rules /etc/udev/rules.d`
+1. To see your changes without a reboot, you can force the udev system to reload:  
+   `$ sudo udevadm control --reload`  
+   `$ sudo udevadm trigger`
 
 ## Optional pre-work
 
