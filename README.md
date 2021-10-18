@@ -54,23 +54,48 @@ Close **1-2** on jumper block **J27** (top right corner of the board).
 1. Drag-and-drop the firmware file onto the mounted drive.
 1. Wait for the file copy operation to complete.
 1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
+2. In Windows Explorer, open **RT1050-EVK** and double-click on **DETAILS.TXT** to check the firmware version (**Interface Version** being the important number):
+   ```
+   # DAPLink Firmware - see https://mbed.com/daplink 
+   Unique ID: 02270b0347784e4500169003d917004ce561000097969900
+   HIC ID: 97969900
+   Auto Reset: 0
+   Automation allowed: 0
+   Overflow detection: 0
+   Daplink Mode: Interface
+   Interface Version: 0254
+   Bootloader Version: 0244
+   Git SHA: f499eb6ec4a847a2b78831fe1acc856fd8eb2f28
+   Local Mods: 0
+   USB Interfaces: MSD, CDC, HID, WebUSB
+   Bootloader CRC: 0xfdb85682
+   Interface CRC: 0xa5cd1195
+   Remount count: 0
+   URL: http://www.nxp.com/imxrt1050evk
+   ```
 
 #### Flashing instructions for MAC users
 
 1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate as **MAINTENANCE**.
 1. In a terminal execute  
-   `sudo mount -u -w -o sync /Volumes/MAINTENANCE ; cp -X <path to firmware file> /Volumes/MAINTENANCE/`  
+   `sudo mount -u -w -o sync /Volumes/MAINTENANCE ; cp -X <path_to_firmware_file> /Volumes/MAINTENANCE/`  
    *Note*: If your drive does not mount as MAINTENANCE make sure to change this to match the name of the mounted disk attached to your system.
 1. Wait for the file copy operation to complete.
 1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
+2. You can check the firmware version of the board by running:  
+   `cat /Volumes/RT1050-EVK/DETAILS.TXT`  
+   Refer to the output above.
 
 #### Flashing instructions for Linux users
 
 1. While holding down the **SW4** button, connect the board's USB debug port (**J28**) to the computer. It should enumerate as **MAINTENANCE**.
 1. In a terminal execute  
-   `$ cp <path to firmware file> <MAINTENANCE> && sync`  
+   `$ cp <path_to_firmware_file> /media/<USERNAME>/MAINTENANCE && sync`  
    *Note*: make sure to change MAINTENANCE to the name of the mount point of the drive on your system.
 1. Power cycle the board. It will now enumerate and mount as **RT1050-EVK**.
+2. You can check the firmware version of the board by runnung:  
+   `cat /media/<USERNAME>/RT1050-EVK/DETAILS.TXT`  
+   Refer to the output above.
 
 #### Accessing the board under Linux
 
@@ -78,8 +103,24 @@ Close **1-2** on jumper block **J27** (top right corner of the board).
 1. To install, copy the [daplink.rules](./DAPLink/daplink.rules) to `/etc/udev/rules.d/` on Ubuntu:  
    `$ sudo cp daplink.rules /etc/udev/rules.d`
 1. To see your changes without a reboot, you can force the udev system to reload:  
-   `$ sudo udevadm control --reload`  
-   `$ sudo udevadm trigger`
+   ```
+   $ sudo udevadm control --reload  
+   $ sudo udevadm trigger
+   ```
+1. Once connected, run `dmesg` to check the USB connection:
+   ```
+   [1705027.680326] usb 1-4: USB disconnect, device number 5 
+   [1705043.749234] usb 1-4: new full-speed USB device number 6 using xhci_hcd
+   [1705043.907107] usb 1-4: New USB device found, idVendor=0d28, idProduct=0204, bcdDevice=10.00
+   [1705043.907112] usb 1-4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+   [1705043.907115] usb 1-4: Product: DAPLink CMSIS-DAP
+   [1705043.907117] usb 1-4: Manufacturer: ARM
+   [1705043.907119] usb 1-4: SerialNumber: 02270b0347784e4500169003d917004ce561000097969900
+   [1705043.914218] usb-storage 1-4:1.0: USB Mass Storage device detected
+   [1705043.914748] scsi host1: usb-storage 1-4:1.0
+   [1705043.915433] cdc_acm 1-4:1.1: ttyACM0: USB ACM device
+   [1705043.917585] hid-generic 0003:0D28:0204.005B: hiddev1,hidraw2: USB HID v1.00 Device [ARM DAPLink CMSIS-DAP] on usb-0000:00:14.0-4/input3
+   ```   
 
 ## Optional pre-work
 
