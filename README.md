@@ -135,13 +135,17 @@ Two of the projects shown in the workshop require additional accounts being set 
 
 The [slide deck]() contains screenshots of the workshop. Use it to recreate the workshop in your own pace.
 
-## Further reading
+## Learn more
 
-Here's a list of additional resources that you may find useful:
+#### At DevSummit
 
-- A DevSummit session that explains the background of the workshop: [CI/CD and MLOps workflow for IoT endpoint development](https://devsummit.arm.com/en/sessions/145)
-- A blog, similar to the above: [Cloud-based embedded development to supercharge IoT](https://www.arm.com/blogs/blueprint/cloud-based-embedded-development)
-- Blog about [Cloud infrastructure for continuous integration tests](https://community.arm.com/developer/tools-software/tools/b/tools-software-ides-blog/posts/infrastructure-for-continuous-integration-tests)
+- A session explaining the background of the workshop: [CI/CD and MLOps workflow for IoT endpoint development](https://devsummit.arm.com/en/sessions/145) (on demand)
+- A workshop about [IoT DevOps made simple and scalable in the cloud](https://devsummit.arm.com/en/sessions/539?utm_source=armdevsummit&utm_medium=social&utm_campaign=2021_armdevsummit_mk17_arm_na_na_conv&utm_content=spo) (21 Oct, 9.15 PST): Get started with the recently announced, Arm Virtual Hardware during this pop-up workshop. Arm Virtual Hardware is an evolution of Arm's modelling technology delivering functionally accurate models of Arm-based SoCs for application developers to build and test software before and after silicon and hardware availability. This workshop will show you how to simplify and implement IoT DevOps at scale in the cloud with Arm Virtual Hardware.
+
+#### Blogs
+
+- [Cloud-based embedded development to supercharge IoT](https://www.arm.com/blogs/blueprint/cloud-based-embedded-development)
+- [Cloud infrastructure for continuous integration tests](https://community.arm.com/developer/tools-software/tools/b/tools-software-ides-blog/posts/infrastructure-for-continuous-integration-tests)
 
 ## Feedback
 
