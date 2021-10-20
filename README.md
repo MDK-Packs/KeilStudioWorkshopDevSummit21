@@ -28,7 +28,7 @@ If you do not have access to the board, you can still follow much of the worksho
 ### Required software
 
 - Keil Studio Cloud runs in a browser. You need a **Chromium** based browser (Chrome/Edge - no matter if you run Windows, Mac, or Linux).
-- Create a user account at [studio.keil.arm.com](studio.keil.arm.com) and ensure you can login. If you have an Arm or Mbed account, you can use these to access the site.
+- Create a user account at [studio.keil.arm.com](https://studio.keil.arm.com) and ensure you can login. If you have an Arm or Mbed account, you can use these to access the site.
 
 ### CMSIS-DAP Firmware
 
@@ -128,12 +128,12 @@ Two of the projects shown in the workshop require additional accounts being set 
 
 - Set up a [GitHub](https://www.github.com) account for forking one of the example projects.
 - Set up an AWS account if you want to follow the last step in the tutorial:
-  - Create an account at [aws.amazon.com](aws.amazon.com).
+  - Create an account at [aws.amazon.com](https://aws.amazon.com).
   - For the workshop, you need to configure a Thing in the AWS IoT console. You also need to have copies of your client certificate and private key available. For creation, follow [these instructions](https://github.com/MDK-Packs/Documentation/tree/master/AWS_Thing).
 
 ## Slides
 
-The [slide deck]() contains screenshots of the workshop. Use it to recreate the workshop in your own pace.
+The [slide deck](./documents/Keil_Studio_DevSummit_2021.pdf) contains screenshots of the workshop. Use it to recreate the workshop in your own pace.
 
 ## Learn more
 
